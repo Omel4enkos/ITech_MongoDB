@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #EBF3FA;
+}
+p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+.Top-text{
+    font-family: 'Marck Script', cursive;
+    padding: 15px 0 10px 15px;
+    border-bottom: 1px solid #337AB7;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #000000;
+    font-size: 18px;
+    box-shadow: 0 10px 20px -5px #337AB7;
+    background-color: #c9daff;
+}
+.div-task{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+.task{
+    margin: 15px 0;
+    font-family: 'Marck Script', cursive;
+    border: 2px solid #337AB7;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 600px;
+    height: 40px;
+    background-color: #c9daff;
+}
+.task p{
+    text-align: center;
+    margin:auto;
+}
+.position{
+    display: flex;
+    justify-content: space-between;
+}
+.list {
+    width: 320px;
+    margin: 20px 50px 0;
+    padding:0;
+    list-style: none;
+    counter-reset: li;
+}
+.list li {
+    border: 2px solid #337AB7;
+    background: #EBF3FA;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+}
+.list li:hover {
+    z-index: 1;
+}
+.list #li1:before {
+     border: 2px solid #337AB7;
+     position: absolute;
+     top: -14px;
+     padding: 2px 10px;
+     font-size: 11px;
+     font-weight: bold;
+     color: #337AB7;
+     background: #F7FAFD;
+     content: "1";
+     -webkit-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+ }
+.list #li2:before {
+    border: 2px solid #337AB7;
+    position: absolute;
+    top: -14px;
+    padding: 2px 10px;
+    margin-left: -11.5px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #337AB7;
+    background: #F7FAFD;
+    content: "2";
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.list #li3:before {
+    border: 2px solid #337AB7;
+    position: absolute;
+    top: -14px;
+    margin-left: -25px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #337AB7;
+    background: #F7FAFD;
+    content: "3";
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.list li:hover:before {
+    background: #337AB7;
+    color: #FFF;
+    transform: translate(-12px, 0);
+}
+.list li:after {
+    content: "";
+    position: absolute;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    z-index: -1;
+    background: #FFF;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0;
+}
+.list li:hover:after {
+    width: 100%;
+}
+
+.dropdown  {
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 16px;/
+    font: inherit;
+    margin: 0;
+}
+.dropdown-content {
+    display: none;
+    width: 100%;
+    left: 0;
+}
+.dropdown:hover .dropdown-content {
+    transition:0.25s; /*Скорость перехода состояния элемента*/
+    animation: show 0.5s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 0.25s; /* Задержка перед началом */
+    opacity:0;
+    display: block;
+}
+@keyframes show{
+    0%{ opacity:0; }
+    100% { opacity:1; }
+}
+
+.box {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+label{
+    font-family: 'Marck Script', cursive;
+}
+.select {
+    width: 400px;
+    height: 125px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    background-color: #c9daff;
+    border: 2px solid #337AB7;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #000000;
+    font-size: 18px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+.div-btn{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.btn2{
+    margin-top: -35px;
+    padding: 10px;
+    width: 125px;
+    border:unset;
+    cursor: pointer;
+    color: black;
+    font-family: 'Marck Script', cursive;
+    font-size: 14px;
+    background: #EBF3FA;
+}
+.select-btn{
+    padding: 10px;
+    width: 125px;
+    border:unset;
+    cursor: pointer;
+    color: black;
+    font-family: 'Marck Script', cursive;
+    font-size: 14px;
+    background: #EBF3FA;
+}
+.select-publisher{
+    width: 125px;
+    margin-left: 10px;
+    font-family: 'Marck Script', cursive;
+    background: #EBF3FA;
+}
+
+.year-btn{
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.div-year{
+    margin-top: -20px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+}
+.select-year{
+    margin-left: 125px;
+    width: 80px;
+    font-family: 'Marck Script', cursive;
+    background: #EBF3FA;
+}
+.select-author{
+    margin-left: 150px;
+    width: 115px;
+    font-family: 'Marck Script', cursive;
+    background: #EBF3FA;
+}
+.position2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.msg {
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    font-family: 'Marck Script', cursive;
+    background-color: #c9daff;
+    border: 2px solid #337AB7;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #000000;
+    font-size: 18px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+.msg2 {
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    font-family: 'Marck Script', cursive;
+    background-color: #c9daff;
+    border: 2px solid #337AB7;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #000000;
+    font-size: 18px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+.msg3 {
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    font-family: 'Marck Script', cursive;
+    background-color: #c9daff;
+    border: 2px solid #337AB7;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #000000;
+    font-size: 18px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+.none{
+    display: none;
+}
+.visibility{
+    visibility: hidden;
+}
